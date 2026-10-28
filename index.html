@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A sample website for practicing AWS EC2 deployment.">
+  <title>Cloud Café | AWS Practice Site</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#"><span class="brand-icon">☁</span> Cloud Café</a>
+    <nav aria-label="Main navigation">
+      <a href="#menu">Menu</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">A DEMO WEBSITE FOR AWS</p>
+        <h1>Fresh ideas.<br><span>Cloud-powered.</span></h1>
+        <p class="hero-description">Welcome to Cloud Café, a dummy website you can use to practise deploying static files to an AWS EC2 server.</p>
+        <a class="primary-button" href="#menu">Explore the menu <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="hero-art" aria-label="Illustration of a coffee cup and cloud" role="img">
+        <div class="sun"></div><div class="cloud cloud-one"></div><div class="cloud cloud-two"></div>
+        <div class="cup"><div class="coffee"></div><div class="cup-heart">♡</div></div>
+        <div class="saucer"></div>
+        <div class="steam steam-one"></div><div class="steam steam-two"></div>
+        <span class="art-caption">BREW • BUILD • DEPLOY</span>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Demo highlights">
+      <div><strong>01</strong><span>Static HTML</span></div>
+      <div><strong>02</strong><span>CSS styling</span></div>
+      <div><strong>03</strong><span>JavaScript demo</span></div>
+      <div><strong>04</strong><span>EC2 ready</span></div>
+    </section>
+
+    <section class="menu-section" id="menu">
+      <div class="section-heading">
+        <div><p class="eyebrow">THE SAMPLE MENU</p><h2>Today's favourites</h2></div>
+        <p>Try the buttons — they're powered by JavaScript.</p>
+      </div>
+      <div class="menu-grid">
+        <article class="menu-card">
+          <div class="menu-emoji latte">☕</div>
+          <h3>Cloud Latte</h3><p>Smooth, warm, and ready for a fresh start.</p>
+          <div class="card-bottom"><strong>₹180</strong><button class="add-button" data-item="Cloud Latte">Add to order +</button></div>
+        </article>
+        <article class="menu-card">
+          <div class="menu-emoji mocha">🍫</div>
+          <h3>Dev Mocha</h3><p>A chocolatey boost for your next deployment.</p>
+          <div class="card-bottom"><strong>₹210</strong><button class="add-button" data-item="Dev Mocha">Add to order +</button></div>
+        </article>
+        <article class="menu-card">
+          <div class="menu-emoji tea">🍵</div>
+          <h3>Green Tea</h3><p>A calm break between terminal commands.</p>
+          <div class="card-bottom"><strong>₹120</strong><button class="add-button" data-item="Green Tea">Add to order +</button></div>
+        </article>
+      </div>
+      <div class="order-panel" aria-live="polite">
+        <div><span class="order-label">YOUR DEMO ORDER</span><p id="order-message">No items selected yet.</p></div>
+        <button id="clear-order" class="text-button" type="button">Clear order</button>
+      </div>
+    </section>
+
+    <section class="about-section" id="about">
+      <div><p class="eyebrow">BUILT FOR LEARNING</p><h2>Your first cloud deployment starts here.</h2></div>
+      <p>This sample site uses only HTML, CSS, and vanilla JavaScript — no database, framework, or build process is required. Deploy it to EC2 with Nginx and practise updating it from GitHub.</p>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div><p class="eyebrow">SAY HELLO</p><h2>Ready for your next lab?</h2><p>This form is a front-end demo and does not send data to a server.</p></div>
+      <form id="contact-form">
+        <label for="email">Your email</label>
+        <input id="email" type="email" placeholder="you@example.com" required>
+        <label for="message">Message</label>
+        <textarea id="message" rows="3" placeholder="I'm learning AWS deployment..." required></textarea>
+        <button class="primary-button" type="submit">Send demo message →</button>
+        <p id="form-feedback" class="form-feedback" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer><a class="brand" href="#">☁ Cloud Café</a><span>Practice project · No real orders or payments</span><span>© <span id="year"></span> Cloud Café</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
